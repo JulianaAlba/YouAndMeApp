@@ -1,0 +1,18 @@
+= simple_form_for(@usuario) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :idade
+    = f.input :senha
+    = f.input :confirmarsenha
+    = f.input :sexo
+    = f.input :sexoparceiro
+    = f.input :qualidade
+    = f.input :qualidadeparceiro
+    = f.input :defeito
+    = f.input :defeitoparceiro
+    = f.input :foto
+
+  .form-actions
+    = f.submit 'Salvar'

@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @usuario.nome
+%p
+  %b Idade:
+  = @usuario.idade
+%p
+  %b Senha:
+  = @usuario.senha
+%p
+  %b Confirmarsenha:
+  = @usuario.confirmarsenha
+%p
+  %b Sexo:
+  = @usuario.sexo
+%p
+  %b Sexoparceiro:
+  = @usuario.sexoparceiro
+%p
+  %b Qualidade:
+  = @usuario.qualidade
+%p
+  %b Qualidadeparceiro:
+  = @usuario.qualidadeparceiro
+%p
+  %b Defeito:
+  = @usuario.defeito
+%p
+  %b Defeitoparceiro:
+  = @usuario.defeitoparceiro
+%p
+  %b Foto:
+  = @usuario.foto
+
+= link_to 'Edit', edit_usuario_path(@usuario)
+\|
+= link_to 'Back', usuarios_path

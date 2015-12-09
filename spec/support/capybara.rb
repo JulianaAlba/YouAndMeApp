@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 require 'capybara/rspec'
-=======
- require 'capybara/rspec'
->>>>>>> 9cf08bf7137e7636b8808991bb1b6caa4d9cef9e
+
           require 'capybara/poltergeist'
 
           Capybara.register_driver :poltergeist do |app|
@@ -10,7 +8,4 @@ require 'capybara/rspec'
           end
 
           Capybara.javascript_driver = :poltergeist
-<<<<<<< HEAD
-=======
 
->>>>>>> 9cf08bf7137e7636b8808991bb1b6caa4d9cef9e

@@ -1,0 +1,21 @@
+%h1 Listing defeitos
+
+%table
+  %thead
+    %tr
+      %th Nomedefeito
+      %th
+      %th
+      %th
+
+  %tbody
+    - @defeitos.each do |defeito|
+      %tr
+        %td= defeito.Nomedefeito
+        %td= link_to 'Show', defeito
+        %td= link_to 'Edit', edit_defeito_path(defeito)
+        %td= link_to 'Excluir', defeito, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Defeito', new_defeito_path

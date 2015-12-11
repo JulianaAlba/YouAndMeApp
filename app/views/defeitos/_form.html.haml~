@@ -1,0 +1,8 @@
+= simple_form_for(@defeito) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :Nomedefeito
+
+  .form-actions
+    = f.submit 'Salvar'

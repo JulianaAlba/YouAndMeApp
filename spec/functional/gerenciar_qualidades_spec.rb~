@@ -11,7 +11,7 @@ feature 'gerenciar qualidade' do
   scenario 'alterar qualidade' do
 
     qualidade = FactoryGirl.create(:qualidade)
-    visit edit_usuario_path(qualidade)
+    visit edit_defeito_path(qualidade)
     preencher_e_verificar_qualidade
 
   end

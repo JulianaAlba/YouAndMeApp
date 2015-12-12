@@ -1,0 +1,11 @@
+= simple_form_for @picture, html: { multipart: true } do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :Nomepicture
+
+  .form-field
+    = f.file_field :pictureinteira
+
+  .form-actions
+    = f.submit 'Salvar' 

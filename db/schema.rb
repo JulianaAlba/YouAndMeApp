@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212022303) do
+ActiveRecord::Schema.define(version: 20151212045000) do
 
   create_table "defeitos", force: :cascade do |t|
     t.string   "Nomedefeito"
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(version: 20151212022303) do
     t.decimal  "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string   "Nomepicture"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "pictureinteira_file_name"
+    t.string   "pictureinteira_content_type"
+    t.integer  "pictureinteira_file_size"
+    t.datetime "pictureinteira_updated_at"
   end
 
   create_table "qualidades", force: :cascade do |t|

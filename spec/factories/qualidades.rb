@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :qualidade do
-    Nomequalidade "MyString"
+  factory :qualidade, :class => Qualidade do
+    Nomequalidade "Sincera"
   end
 
 end

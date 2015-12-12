@@ -1,0 +1,43 @@
+%h1 Listing pessoas
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Idade
+      %th Senha
+      %th Confirmarsenha
+      %th Sexo
+      %th Sexoparceiro
+      %th Qualidade
+      %th Qualidadeparceiro
+      %th Defeito
+      %th Defeitoparceiro
+      %th Picture
+      %th
+      %th
+      %th
+
+  %tbody
+    - @pessoas.each do |pessoa|
+      %tr
+        %td= pessoa.nome
+        %td= pessoa.idade
+        %td= pessoa.senha
+        %td= pessoa.confirmarsenha
+        %td= pessoa.sexo
+        %td= pessoa.sexoparceiro
+        %td= pessoa.qualidade.Nomequalidade
+        %td= pessoa.qualidadeparceiro.Nomequalidadep
+        %td= pessoa.defeito.Nomedefeito
+        %td= pessoa.defeitoparceiro.Nomedefeitop
+        %td= pessoa.picture.Nomepicture
+
+
+        %td= link_to 'Show', pessoa
+        %td= link_to 'Edit', edit_pessoa_path(pessoa)
+        %td= link_to 'Excluir', pessoa, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Pessoa', new_pessoa_path

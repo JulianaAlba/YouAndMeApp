@@ -1,0 +1,8 @@
+= simple_form_for(@defeitoparceiro) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :Nomedefeitop
+
+  .form-actions
+    = f.button :submit

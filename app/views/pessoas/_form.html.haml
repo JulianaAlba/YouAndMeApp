@@ -1,0 +1,18 @@
+= simple_form_for(@pessoa) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :idade
+    = f.input :senha
+    = f.input :confirmarsenha
+    = f.input :sexo
+    = f.input :sexoparceiro
+    = f.association :qualidade, label_method: :Nomequalidade
+    = f.association :qualidadeparceiro, label_method: :Nomequalidadep
+    = f.association :defeito, label_method: :Nomedefeito
+    = f.association :defeitoparceiro, label_method: :Nomedefeitop
+    = f.association :picture, label_method: :Nomepicture
+
+  .form-actions
+    = f.submit 'Salvar'

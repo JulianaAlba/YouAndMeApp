@@ -1,0 +1,21 @@
+%h1 Listing qualidadeparceiros
+
+%table
+  %thead
+    %tr
+      %th Nomequalidadep
+      %th
+      %th
+      %th
+
+  %tbody
+    - @qualidadeparceiros.each do |qualidadeparceiro|
+      %tr
+        %td= qualidadeparceiro.Nomequalidadep
+        %td= link_to 'Show', qualidadeparceiro
+        %td= link_to 'Edit', edit_qualidadeparceiro_path(qualidadeparceiro)
+        %td= link_to 'Destroy', qualidadeparceiro, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Qualidadeparceiro', new_qualidadeparceiro_path

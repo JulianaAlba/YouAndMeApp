@@ -1,0 +1,61 @@
+require 'rails_helper'
+
+feature 'gerenciar pessoa' do
+
+
+  before(:each) do
+    @qualidade = create(:qualidade, Nomequalidade: "Sincera")
+    @qualidadeparceiro = create(:qualidadeparceiro, Nomequalidadep: "Sincero")
+    @defeito = create(:defeito, Nomedefeito: "Falsa")
+    @defeitoparceiro = create(:defeitoparceiro, Nomedefeitop: "Falso")
+    @picture = create(:picture, Nomepicture: "Boxe")
+
+  end
+
+
+  let(:dados) do {
+    Nomequalidade: "Sincera",
+    Nomequalidadep: "Sincero",
+    Nomedefeito: "Falsa",
+    Nomedefeitop: "Falso",
+    Nomepicture: "Boxe"
+   } 
+ end
+
+
+  scenario 'incluir pessoa' do
+    visit new_pessoa_path
+    preencher(dados)
+    click_button 'Salvar'
+    verificar(dados)
+  end
+
+
+  scenario 'alterar pessoa' do
+    pessoa = FactoryGirl.create(:pessoa, qualidade: @qualidade)
+    pessoa = FactoryGirl.create(:pessoa, qualidadeparceiro: @qualidadeparceiro)
+    pessoa = FactoryGirl.create(:pessoa, defeito: @defeito)
+    pessoa = FactoryGirl.create(:pessoa, defeitoparceiro: @defeitoparceiro)
+    pessoa = FactoryGirl.create(:pessoa, picture: @picture)
+    visit edit_pessoa_path(pessoa)
+    preencher(dados)
+    click_button 'Salvar'
+    verificar(dados)
+  end
+
+
+  scenario 'excluir pessoa' do
+    pessoa = FactoryGirl.create(:pessoa, qualidade: @qualidade)
+    pessoa = FactoryGirl.create(:pessoa, qualidadeparceiro: @qualidadeparceiro)
+    pessoa = FactoryGirl.create(:pessoa, defeito: @defeito)
+    pessoa = FactoryGirl.create(:pessoa, defeitoparceiro: @defeitoparceiro)
+    pessoa = FactoryGirl.create(:pessoa, picture: @picture)
+    visit pessoas_path
+    click_link 'Excluir'
+  end
+
+
+
+
+
+end

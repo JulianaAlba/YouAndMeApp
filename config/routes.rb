@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :defeitoparceiros
+  resources :qualidadeparceiros
+  resources :pessoas
   resources :pictures
   resources :locals
   resources :defeitos

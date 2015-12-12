@@ -1,0 +1,39 @@
+require 'rails_helper'
+
+feature 'gerenciar qualidadeparc' do
+
+  scenario 'incluir qualidadeparc' do
+
+    visit new_qualidadeparc_path
+    preencher_e_verificar_qualidadeparc
+  end
+
+  scenario 'alterar qualidadeparc' do
+
+    qualidadeparc = FactoryGirl.create(:qualidadeparc)
+    visit edit_qualidadeparc_path(qualidadeparc)
+    preencher_e_verificar_qualidadeparc
+
+  end
+
+   scenario 'excluir qualidadeparc' do
+
+    qualidadeparc = FactoryGirl.create(:qualidadeparc)
+    visit qualidadeparcs_path
+    click_link 'Excluir'
+
+  end
+
+   def preencher_e_verificar_qualidadeparc
+
+      fill_in 'Nomequalidadep',     :with => "Sincera"
+
+
+      click_button 'Salvar'
+
+      expect(page).to have_content 'Nomequalidadep: Sincera'
+
+
+
+   end
+end

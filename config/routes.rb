@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :locals
   resources :defeitos
   resources :qualidades
   resources :usuarios

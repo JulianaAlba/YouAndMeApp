@@ -1,0 +1,27 @@
+require 'rails_helper'
+
+RSpec.describe "localidades/new", type: :view do
+  before(:each) do
+    assign(:localidade, Localidade.new(
+      :Nomelocalidade => "MyString",
+      :elevacao => "9.99",
+      :latitude => "9.99",
+      :longitude => "9.99"
+    ))
+  end
+
+  it "renders new localidade form" do
+    render
+
+    assert_select "form[action=?][method=?]", localidades_path, "post" do
+
+      assert_select "input#localidade_Nomelocalidade[name=?]", "localidade[Nomelocalidade]"
+
+      assert_select "input#localidade_elevacao[name=?]", "localidade[elevacao]"
+
+      assert_select "input#localidade_latitude[name=?]", "localidade[latitude]"
+
+      assert_select "input#localidade_longitude[name=?]", "localidade[longitude]"
+    end
+  end
+end

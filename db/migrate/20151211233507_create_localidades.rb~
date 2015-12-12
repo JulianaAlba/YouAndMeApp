@@ -1,0 +1,12 @@
+class CreateLocalidades < ActiveRecord::Migration
+  def change
+    create_table :localidades do |t|
+      t.string :Nomelocalidade
+      t.decimal :elevacao
+      t.decimal :latitude
+      t.decimal :longitude
+
+      t.timestamps null: false
+    end
+  end
+end

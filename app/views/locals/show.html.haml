@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Nomelocal:
+  = @local.Nomelocal
+%p
+  %b Elevacao:
+  = @local.elevacao
+%p
+  %b Latitude:
+  = @local.latitude
+%p
+  %b Longitude:
+  = @local.longitude
+
+= link_to 'Edit', edit_local_path(@local)
+\|
+= link_to 'Back', locals_path

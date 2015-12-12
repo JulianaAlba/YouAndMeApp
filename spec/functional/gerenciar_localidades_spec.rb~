@@ -1,0 +1,42 @@
+require 'rails_helper'
+
+feature 'gerenciar localidade' do
+
+  scenario 'incluir localidade' do
+
+    visit new_localidade_path
+    preencher_e_verificar_localidade
+  end
+
+  scenario 'alterar localidade' do
+
+    localidade = FactoryGirl.create(:localidade)
+    visit edit_localidade_path(localidade)
+    preencher_e_verificar_localidade
+
+  end
+
+   scenario 'excluir localidade' do
+
+    localidade = FactoryGirl.create(:localidade)
+    visit localidades_path
+    click_link 'Excluir'
+
+  end
+
+    def preencher_e_verificar_localidade
+
+	fill_in 'Nomelocalidade',	    :with => "Bar"
+	fill_in 'elevacao',	    :with => "8.1"
+        fill_in 'latitude',    	:with => "-21.80899426"
+	fill_in 'longitude',	:with => "-41.38983786"
+	
+	click_button 'Salvar'
+
+	expect(page).to have_content 'Nomelocalidade: Bar'
+	expect(page).to have_content 'elevacao: 8.1'
+	expect(page).to have_content 'latitude: -21.80899426'
+	expect(page).to have_content 'longitude: -41.38983786'
+
+    end
+end

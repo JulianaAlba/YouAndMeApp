@@ -1,0 +1,42 @@
+require 'rails_helper'
+
+feature 'gerenciar localizacao' do
+
+  scenario 'incluir localizacao' do
+
+    visit new_localizacao_path
+    preencher_e_verificar_localizacao
+  end
+
+  scenario 'alterar localizacao' do
+
+    localizacao = FactoryGirl.create(:localizacao)
+    visit edit_localizacao_path(localizacao)
+    preencher_e_verificar_localizacao
+
+  end
+
+   scenario 'excluir localizacao' do
+
+    localizacao = FactoryGirl.create(:localizacao)
+    visit localizacaos_path
+    click_link 'Excluir'
+
+  end
+
+    def preencher_e_verficar_localizacao
+
+	fill_in 'Nomelocalizacao',	    :with => "Bar"
+	fill_in 'Elevacao',	    :with => "8"
+        fill_in 'Latitude',    	:with => "-21.80899426"
+	fill_in 'Longitude',	:with => "-41.38983786"
+	
+	click_button 'Salvar'
+
+	expect(page).to have_content 'Nomelocalizacao: Bar'
+	expect(page).to have_content 'Elevacao: 8'
+	expect(page).to have_content 'Latitude: -21.80899426'
+	expect(page).to have_content 'Longitude: -41.38983786'
+
+    end
+end

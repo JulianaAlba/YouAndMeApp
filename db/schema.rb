@@ -11,12 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151211151945) do
+ActiveRecord::Schema.define(version: 20151212022303) do
 
   create_table "defeitos", force: :cascade do |t|
     t.string   "Nomedefeito"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "localidades", force: :cascade do |t|
+    t.string   "Nomelocalidade"
+    t.float    "elevacao"
+    t.decimal  "latitude"
+    t.decimal  "longitude"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "localizacaos", force: :cascade do |t|
+    t.string   "Nomelocalizacao"
+    t.float    "elevacao"
+    t.decimal  "latitude"
+    t.decimal  "longitude"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "locals", force: :cascade do |t|
+    t.string   "Nomelocal"
+    t.decimal  "elevacao"
+    t.decimal  "latitude"
+    t.decimal  "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "qualidades", force: :cascade do |t|

@@ -1,10 +1,10 @@
-%h1 Listing locals
+%h1 Listagem das localidades
 
 %table
   %thead
     %tr
-      %th Nomelocal
-      %th Elevacao
+      %th Nome do local
+      %th Elevação
       %th Latitude
       %th Longitude
       %th
@@ -18,10 +18,15 @@
         %td= local.elevacao
         %td= local.latitude
         %td= local.longitude
-        %td= link_to 'Show', local
-        %td= link_to 'Edit', edit_local_path(local)
+        %td= link_to 'Visualizar', local
+        %td= link_to 'Editar', edit_local_path(local)
         %td= link_to 'Excluir', local, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Local', new_local_path
+= link_to 'Criar Novo Local', new_local_path
+
+%p
+  .rodape
+    = link_to( "Retornar a tela inicial", root_path )
+

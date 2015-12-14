@@ -1,0 +1,7 @@
+%h1 Editing qualidade
+
+= render 'form'
+
+= link_to 'Show', @qualidade
+\|
+= link_to 'Back', qualidades_path

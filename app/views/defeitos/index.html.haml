@@ -1,9 +1,9 @@
-%h1 Listing defeitos
+%h1 Listagem dos defeitos
 
 %table
   %thead
     %tr
-      %th Nomedefeito
+      %th Defeitos:
       %th
       %th
       %th
@@ -12,10 +12,15 @@
     - @defeitos.each do |defeito|
       %tr
         %td= defeito.Nomedefeito
-        %td= link_to 'Show', defeito
-        %td= link_to 'Edit', edit_defeito_path(defeito)
+        %td= link_to 'Visualizar', defeito
+        %td= link_to 'Editar', edit_defeito_path(defeito)
         %td= link_to 'Excluir', defeito, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Defeito', new_defeito_path
+= link_to 'Criar Novo Defeito', new_defeito_path
+
+%p
+  .rodape
+    = link_to( "Retornar a tela inicial", root_path )
+

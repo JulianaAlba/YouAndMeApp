@@ -1,9 +1,9 @@
-%h1 Listing defeitoparceiros
+%h1 Listagem dos defeitos dos parceiros
 
 %table
   %thead
     %tr
-      %th Nomedefeitop
+      %th Defeitos:
       %th
       %th
       %th
@@ -18,4 +18,9 @@
 
 %br
 
-= link_to 'New Defeitoparceiro', new_defeitoparceiro_path
+= link_to 'Criar Novo Defeito do Parceiro', new_defeitoparceiro_path
+
+%p
+  .rodape
+    = link_to( "Retornar a tela inicial", root_path )
+

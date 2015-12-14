@@ -1,0 +1,7 @@
+%h1 Editing defeitoparceiro
+
+= render 'form'
+
+= link_to 'Show', @defeitoparceiro
+\|
+= link_to 'Back', defeitoparceiros_path

@@ -1,9 +1,9 @@
-%h1 Listing pictures
+%h1 Listagem das Fotos
 
 %table
   %thead
     %tr
-      %th Nomepicture
+      %th Nome da foto
       %th
       %th
       %th
@@ -12,10 +12,15 @@
     - @pictures.each do |picture|
       %tr
         %td= picture.Nomepicture
-        %td= link_to 'Show', picture
-        %td= link_to 'Edit', edit_picture_path(picture)
+        %td= link_to 'Visualizar', picture
+        %td= link_to 'Editar', edit_picture_path(picture)
         %td= link_to 'Excluir', picture, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Picture', new_picture_path
+= link_to 'Criar Nova Foto', new_picture_path
+
+%p
+  .rodape
+    = link_to( "Retornar a tela inicial", root_path )
+

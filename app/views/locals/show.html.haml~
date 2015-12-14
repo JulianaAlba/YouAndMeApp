@@ -1,10 +1,10 @@
 %p#notice= notice
 
 %p
-  %b Nome do local:
+  %b Nomelocal:
   = @local.Nomelocal
 %p
-  %b Elevação:
+  %b Elevacao:
   = @local.elevacao
 %p
   %b Latitude:

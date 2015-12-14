@@ -1,4 +1,4 @@
-%h1 Listing pessoas
+%h1 Listagem das pessoas
 
 %table
   %thead
@@ -6,13 +6,13 @@
       %th Nome
       %th Idade
       %th Senha
-      %th Confirmarsenha
+      %th Confirmar senha
       %th Sexo
-      %th Sexoparceiro
+      %th Sexo parceiro
       %th Qualidade
-      %th Qualidadeparceiro
+      %th Qualidade parceiro
       %th Defeito
-      %th Defeitoparceiro
+      %th Defeito parceiro
       %th Picture
       %th
       %th
@@ -34,10 +34,17 @@
         %td= pessoa.picture.Nomepicture
 
 
-        %td= link_to 'Show', pessoa
-        %td= link_to 'Edit', edit_pessoa_path(pessoa)
-        %td= link_to 'excluir', pessoa, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Visualizar', pessoa
+        %td= link_to 'Editar', edit_pessoa_path(pessoa)
+        %td= link_to 'Excluir', pessoa, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
+  %br
 
-= link_to 'New Pessoa', new_pessoa_path
+= link_to 'Criar Nova Pessoa', new_pessoa_path
+
+%p
+  .rodape
+    = link_to( "Retornar a tela inicial", root_path )
+
+
+

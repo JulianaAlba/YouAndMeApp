@@ -1,9 +1,9 @@
-%h1 Listing defeitoparceiros
+%h1 Listagem dos defeitos dos parceiros
 
 %table
   %thead
     %tr
-      %th Nomedefeitop
+      %th Defeitos:
       %th
       %th
       %th
@@ -12,10 +12,15 @@
     - @defeitoparceiros.each do |defeitoparceiro|
       %tr
         %td= defeitoparceiro.Nomedefeitop
-        %td= link_to 'Show', defeitoparceiro
-        %td= link_to 'Edit', edit_defeitoparceiro_path(defeitoparceiro)
+        %td= link_to 'Visualizar', defeitoparceiro
+        %td= link_to 'Editar', edit_defeitoparceiro_path(defeitoparceiro)
         %td= link_to 'Excluir', defeitoparceiro, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Defeitoparceiro', new_defeitoparceiro_path
+= link_to 'Criar Novo Defeito do Parceiro', new_defeitoparceiro_path
+
+%p
+  .rodape
+    = link_to( "Retornar a tela inicial", root_path )
+

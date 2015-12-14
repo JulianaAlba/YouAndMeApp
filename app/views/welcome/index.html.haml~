@@ -1,2 +1,52 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.haml
+
+<font face= size="1" color="black"> <center> <h1> Seja Bem Vindo </h1> </font>
+
+.titulo
+
+%h3 <b> Aplicativo You And Me </center>
+
+
+	O aplicativo aborda o diferencial de poder conhecer alguém, simplesmente jogando um quebra-cabeça, ou seja, tentando encaixar partes das fotos disponibilizadas no perfil da pessoa. Assim como contará com a sincronização da qualidade que você mais gosta e defeito que menos gosta, para encontrar alguém que se descreva de forma igual a que você busca, sendo assim, você receberá um alerta de compatibilidade de perfil que você busca (quando solicitar a combinação), mas a mesma não receberá a notificação caso você não tenha o perfil compatível com o que ela busca. Mas ainda assim o jogo pode começar, junto com o alerta você recebe uma parte do quebra cabeça que a pessoa escolheu como parte principal da foto dela, você escolhe aceitar para explorar e daí a pessoa pode aceitar ou não que você jogue com ela. Se aceitar a pessoa recebe a parte do quebra-cabeça que você escolheu como principal e você a dela; as duas pessoas terão apenas uma peça base, e visualizará várias outras peças de outras pessoas aleatoriamente, junto com peças que se encaixam com a peça principal do parceiro(a). Optando pela peça que ache que combine com a peça principal da foto, será feito a tentativa de encaixe, caso funcione você pode tentar mais uma peça e assim sucessivamente até que tenha a foto completa, e em caso de falha, o seu parceiro(a) que terá a chance de jogar. Finalizado o jogo, você receberá todas as informações do perfil da pessoa combinada.
+
+</b>
+
+.menus
+
+	%p
+	%h3 1. Pessoas:
+	= link_to( "Menu de Usuários", pessoas_path )
+
+	%p
+	%h3 2. Qualidades:
+	= link_to( "Menu de Qualidades", qualidades_path )
+
+	%p
+	%h3 3. Defeitos:
+	= link_to( "Menu de Defeitos", defeitos_path )
+
+	%p
+	%h3 4. Qualidades dos Parceiros:
+	= link_to( "Menu de Qualidades dos Parceiros", qualidadeparceiros_path )
+
+	%p
+	%h3 5. Defeitos dos Parceiros:
+	= link_to( "Menu de Defeitos dos Parceiros", defeitoparceiros_path )
+
+	%p
+	%h3 6. Localidades:
+	= link_to( "Menu de Localidades", locals_path )
+
+	%p
+	%h3 7. Fotos:
+	= link_to( "Menu de Fotos", pictures_path )
+
+</br>
+</br>
+</br>
+
+%h4
+
+.rodape
+	Aplicativo You And Me - Desenvolvido por Juliana Alba
+
+

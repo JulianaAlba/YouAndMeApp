@@ -1,4 +1,4 @@
-%h1 Editando a Qualidade do Parceiro
+%h1 Editing qualidadeparceiro
 
 = render 'form'
 

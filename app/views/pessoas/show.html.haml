@@ -10,30 +10,30 @@
   %b Senha:
   = @pessoa.senha
 %p
-  %b Confirmarsenha:
+  %b Confirmar senha:
   = @pessoa.confirmarsenha
 %p
   %b Sexo:
   = @pessoa.sexo
 %p
-  %b Sexoparceiro:
+  %b Sexo parceiro:
   = @pessoa.sexoparceiro
 %p
   %b Qualidade:
   = @pessoa.qualidade.Nomequalidade
 %p
-  %b Qualidadeparceiro:
+  %b Qualidade parceiro:
   = @pessoa.qualidadeparceiro.Nomequalidadep
 %p
   %b Defeito:
   = @pessoa.defeito.Nomedefeito
 %p
-  %b Defeitoparceiro:
+  %b Defeito parceiro:
   = @pessoa.defeitoparceiro.Nomedefeitop
 %p
-  %b Picture:
+  %b Foto:
   = @pessoa.picture.Nomepicture
 
-= link_to 'Edit', edit_pessoa_path(@pessoa)
+= link_to 'Editar', edit_pessoa_path(@pessoa)
 \|
-= link_to 'Back', pessoas_path
+= link_to 'Voltar', pessoas_path

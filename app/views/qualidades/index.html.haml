@@ -1,9 +1,9 @@
-%h1 Listing qualidades
+%h1 Listagem das qualidades
 
 %table
   %thead
     %tr
-      %th Nomequalidade
+      %th Qualidades:
       %th
       %th
       %th
@@ -12,10 +12,15 @@
     - @qualidades.each do |qualidade|
       %tr
         %td= qualidade.Nomequalidade
-        %td= link_to 'Show', qualidade
-        %td= link_to 'Edit', edit_qualidade_path(qualidade)
+        %td= link_to 'Visualizar', qualidade
+        %td= link_to 'Editar', edit_qualidade_path(qualidade)
         %td= link_to 'Excluir', qualidade, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Qualidade', new_qualidade_path
+= link_to 'Criar Nova Qualidade', new_qualidade_path
+
+%p
+  .rodape
+    = link_to( "Retornar a tela inicial", root_path )
+

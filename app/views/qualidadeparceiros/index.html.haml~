@@ -1,9 +1,9 @@
-%h1 Listing qualidadeparceiros
+%h1 Listagem das qualidades dos parceiros
 
 %table
   %thead
     %tr
-      %th Nomequalidadep
+      %th Qualidades:
       %th
       %th
       %th
@@ -14,8 +14,13 @@
         %td= qualidadeparceiro.Nomequalidadep
         %td= link_to 'Show', qualidadeparceiro
         %td= link_to 'Edit', edit_qualidadeparceiro_path(qualidadeparceiro)
-        %td= link_to 'Destroy', qualidadeparceiro, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Excluir', qualidadeparceiro, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Qualidadeparceiro', new_qualidadeparceiro_path
+= link_to 'Criar Nova Qualidade do Parceiro', new_qualidadeparceiro_path
+
+%p
+  .rodape
+    = link_to( "Retornar a tela inicial", root_path )
+

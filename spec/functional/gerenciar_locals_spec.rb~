@@ -27,16 +27,16 @@ feature 'gerenciar local' do
     def preencher_e_verificar_local
 
 	fill_in 'Nomelocal',	    :with => "Bar"
-	fill_in 'elevacao',	    :with => "-21.80899425"
-        fill_in 'latitude',    	:with => "-21.80899426"
-	fill_in 'longitude',	:with => "-41.38983786"
+	fill_in 'Elevacao',	    :with => "-21.80899425"
+        fill_in 'Latitude',    	:with => "-21.80899426"
+	fill_in 'Longitude',	:with => "-41.38983786"
 	
 	click_button 'Salvar'
 
-	expect(page).to have_content 'Nomelocal: Bar'
-	expect(page).to have_content 'elevacao: -21.80899425'
-	expect(page).to have_content 'latitude: -21.80899426'
-	expect(page).to have_content 'longitude: -41.38983786'
+	expect(page).to have_content 'Nome do local: Bar'
+	expect(page).to have_content 'Elevaçao: -21.80899425'
+	expect(page).to have_content 'Latitude: -21.80899426'
+	expect(page).to have_content 'Longitude: -41.38983786'
 
     end
 end

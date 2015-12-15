@@ -31,7 +31,7 @@ feature 'gerenciar qualidadeparceiro' do
 
       click_button 'Salvar'
 
-      expect(page).to have_content 'Nomequalidadep: Sincero'
+      expect(page).to have_content 'Nome da Qualidade do Parceiro: Sincero'
 
 
 

@@ -31,7 +31,7 @@ feature 'gerenciar defeitoparceiro' do
 
       click_button 'Salvar'
 
-      expect(page).to have_content 'Nomedefeitop: Falso'
+      expect(page).to have_content 'Nome do defeito do parceiro: Falso'
 
 
 

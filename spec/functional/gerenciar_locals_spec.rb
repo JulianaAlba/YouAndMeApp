@@ -33,8 +33,8 @@ feature 'gerenciar local' do
 	
 	click_button 'Salvar'
 
-	expect(page).to have_content 'Nomelocal: Bar'
-	expect(page).to have_content 'Elevacao: -21.80899425'
+	expect(page).to have_content 'Nome do local: Bar'
+	expect(page).to have_content 'Elevação: -21.80899425'
 	expect(page).to have_content 'Latitude: -21.80899426'
 	expect(page).to have_content 'Longitude: -41.38983786'
 

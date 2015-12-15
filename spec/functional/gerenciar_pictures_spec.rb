@@ -30,7 +30,7 @@ feature 'gerenciar picture' do
 
       click_button 'Salvar'
 
-      expect(page).to have_content 'Nomepicture: Rj'
+      expect(page).to have_content 'Nome da Foto: Rj'
 
    end
 end
